@@ -14,4 +14,9 @@ Open cloned folder or extracted zip folder in android studio.
 
 To run tests with coverage 
 
-   1. Right click on "app" under project structure and click on "Run All Tests with Coverage"
+  * Right click on "app" under project structure and click on "Run All Tests with Coverage"
+  
+ App Demo :
+ 
+ ![](Ny Times App Demo.gif)
+  
