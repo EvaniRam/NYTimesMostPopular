@@ -22,15 +22,19 @@ To run tests with coverage
  
  Screenshots :
  
- Most Viewed Article List :
+ ####Most Viewed Article List :
  
  
  ![MostPopularArticleList](https://user-images.githubusercontent.com/6368710/58385956-1e730100-8016-11e9-8a9f-2fdb8c09381e.png)
 
  
- Article Detail Screen :
+ ####Article Detail Screen :
  
 ![NY Times Article Detail](https://user-images.githubusercontent.com/6368710/58385963-406c8380-8016-11e9-8a70-3a19fb44743a.png)
+
+####Error Screen
+
+![error-screen](https://user-images.githubusercontent.com/6368710/58385974-7873c680-8016-11e9-87f2-663a1afdb33a.png)
  
  
   
