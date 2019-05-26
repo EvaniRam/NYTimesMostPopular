@@ -24,11 +24,11 @@ To run tests with coverage
  
  Most Viewed Article List :
  
- ![Article List] (MostPopularArticleList.png)
+ ![Article List] (https://github.com/EvaniRam/NYTimesMostPopular/blob/master/MostPopularArticleList.png)
  
  Article Detail Screen :
  
- ![Article Detail] (NY%20Times%20Article%20Detail.png)
+ ![Article Detail] (https://github.com/EvaniRam/NYTimesMostPopular/blob/master/NY%20Times%20Article%20Detail.png)
  
  
   
