@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NYTimesMostPopular</string>
+    <string name="read_more">Read more ..</string>
+    <string name="nav_header_title">EvaniSitaram</string>
+    <string name="nav_header_email">evaniram9@gmail.com</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="activity_title_ny_times_most_popular_detail">NY Times Most Popular</string>
+    <string name="error_message">Something went wrong at our end !!</string>
+</resources>
