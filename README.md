@@ -19,4 +19,16 @@ To run tests with coverage
  App Demo :
  
  ![Demo](Ny%20Times%20App%20Demo.gif)
+ 
+ Screenshots :
+ 
+ Most Viewed Article List :
+ 
+ ![Article List] (MostPopularArticleList.png)
+ 
+ Article Detail Screen :
+ 
+ ![Article Detail] (NY%20Times%20Article%20Detail.png)
+ 
+ 
   
