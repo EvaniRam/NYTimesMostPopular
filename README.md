@@ -18,5 +18,5 @@ To run tests with coverage
   
  App Demo :
  
- ![Demo](Ny-Times-App-Demo.gif)
+ ![Demo](Ny%20Times%20App%20Demo.gif)
   
