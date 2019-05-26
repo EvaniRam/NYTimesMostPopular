@@ -1,8 +1,5 @@
 package com.evani.nytimesmostpopular.viewmodels;
 
-import android.provider.SyncStateContract;
-
-import com.evani.nytimesmostpopular.models.MostPopularResponse;
 import com.evani.nytimesmostpopular.models.Response;
 import com.evani.nytimesmostpopular.network.ApiClient;
 import com.evani.nytimesmostpopular.network.ApiInterface;
@@ -20,7 +17,7 @@ public class MostPopularDataRequest {
 
     private static final String TAG = MostPopularDataRequest.class.getSimpleName();
 
-    private ApiInterface apiEndPoint;
+    private final ApiInterface apiEndPoint;
 
     public MostPopularDataRequest() {
         this.apiEndPoint = ApiClient.createService(ApiInterface.class);

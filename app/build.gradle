@@ -78,7 +78,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
-    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha5'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     implementation 'com.android.support:cardview-v7:28.0.0'
@@ -89,4 +89,5 @@ dependencies {
 
     implementation "io.reactivex.rxjava2:rxjava:$rxjava"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    androidTestImplementation 'androidx.test:rules:1.2.0-beta01'
 }

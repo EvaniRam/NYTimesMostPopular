@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -25,7 +24,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private static final String TAG = "NewsAdapter";
 
-    private Context mContext;
+    private final Context mContext;
     private List<MostPopular> articleList = new ArrayList<>();
     private List<String> imgUrls = new ArrayList<>();
 
@@ -41,8 +40,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_item,parent,false);
-       ViewHolder holder = new ViewHolder(view);
-       return holder;
+        return new ViewHolder(view);
 
     }
 
@@ -85,13 +83,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imageView;
-        TextView title;
-        TextView author;
-        TextView date;
-        LinearLayout parentLayout;
+        final ImageView imageView;
+        final TextView title;
+        final TextView author;
+        final TextView date;
+        final LinearLayout parentLayout;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.articleImage);
             title = itemView.findViewById(R.id.articleTitle);

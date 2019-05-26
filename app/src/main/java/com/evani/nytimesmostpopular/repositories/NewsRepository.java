@@ -4,7 +4,6 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.evani.nytimesmostpopular.BuildConfig;
 import com.evani.nytimesmostpopular.models.MostPopular;
 import com.evani.nytimesmostpopular.models.MostPopularResponse;
 import com.evani.nytimesmostpopular.network.ApiClient;
@@ -23,10 +22,7 @@ public class NewsRepository {
 
     private static final String TAG = "NewsRepository";
 
-    private String section = "all-sections";
-    private String period ="7";
     private static NewsRepository instance;
-    private Retrofit apiClient;
 
     private MutableLiveData<List<MostPopular>> mMostPopularArticles = new MutableLiveData<>();
 
@@ -34,7 +30,7 @@ public class NewsRepository {
         return showProgress;
     }
 
-    public MutableLiveData<Boolean> showProgress = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> showProgress = new MutableLiveData<>();
 
     private List<MostPopular> dataSet = new ArrayList<>();
 
@@ -47,7 +43,7 @@ public class NewsRepository {
     }
 
     private NewsRepository() {
-        apiClient = ApiClient.getClient();
+        Retrofit apiClient = ApiClient.getClient();
 
     }
 
@@ -55,21 +51,20 @@ public class NewsRepository {
     public MutableLiveData<List<MostPopular>> getMostPopularArticles() {
 
         ApiInterface service = ApiClient.getClient().create(ApiInterface.class);
-        Call<MostPopularResponse> call = service.getArticleDetails(section,period, Constants.API_KEY);
+        String period = "7";
+        String section = "all-sections";
+        Call<MostPopularResponse> call = service.getArticleDetails(section, period, Constants.API_KEY);
         showProgress.setValue(true);
         call.enqueue(new Callback<MostPopularResponse>() {
             @Override
             public void onResponse(Call<MostPopularResponse> call, Response<MostPopularResponse> response) {
 
-                if (response !=null ) {
+                Log.d(TAG, "onResponse: success "+ response.body());
+                int statusCode = response.code();
+                if (statusCode == 200 && response.isSuccessful() ) {
 
-                    Log.d(TAG, "onResponse: success "+ response.body());
-                    int statusCode = response.code();
-                    if (statusCode == 200 && response.isSuccessful() ) {
-
-                        mMostPopularArticles.setValue(response.body().getResults());
-                        showProgress.setValue(false);
-                    }
+                    mMostPopularArticles.setValue(response.body().getResults());
+                    showProgress.setValue(false);
                 }
 
             }

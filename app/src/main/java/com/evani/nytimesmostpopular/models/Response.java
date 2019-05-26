@@ -10,18 +10,18 @@ import java.util.List;
 public class Response implements Serializable {
 
     @NonNull
-    private String status;
+    private final String status;
 
     @NonNull
-    private String copyright;
+    private final String copyright;
 
     @NonNull
     @SerializedName("num_results")
 
-    private int numResults;
+    private final int numResults;
 
     @NonNull
-    private List<MostPopular> results;
+    private final List<MostPopular> results;
 
     public Response(@NonNull String status, @NonNull String copyright, @NonNull int numResults, @NonNull List<MostPopular> results) {
         this.status = status;

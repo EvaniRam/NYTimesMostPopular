@@ -10,8 +10,6 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,19 +18,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.evani.nytimesmostpopular.BuildConfig;
 import com.evani.nytimesmostpopular.R;
 import com.evani.nytimesmostpopular.adapters.MostPopularListAdapter;
-import com.evani.nytimesmostpopular.adapters.NewsAdapter;
-import com.evani.nytimesmostpopular.models.MostPopular;
-import com.evani.nytimesmostpopular.models.MostPopularResponse;
 import com.evani.nytimesmostpopular.models.Response;
-import com.evani.nytimesmostpopular.ui.activities.MainActivity;
 import com.evani.nytimesmostpopular.ui.activities.MostPopularDetailActivity;
 import com.evani.nytimesmostpopular.utils.RecyclerviewItemDecorator;
 import com.evani.nytimesmostpopular.utils.Utils;
 import com.evani.nytimesmostpopular.viewmodels.MostPopularDataRequest;
-import com.evani.nytimesmostpopular.viewmodels.NewsViewModel;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import io.reactivex.disposables.Disposable;
 

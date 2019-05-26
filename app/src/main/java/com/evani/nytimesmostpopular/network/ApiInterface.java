@@ -12,11 +12,14 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
+@SuppressWarnings("SpellCheckingInspection")
 public interface ApiInterface {
+    @SuppressWarnings("SpellCheckingInspection")
     @GET("mostpopular/v2/mostviewed/{section}/{period}.json")
     Call<MostPopularResponse> getArticleDetails(@Path("section") String section, @Path("period") String period,
                                                 @Query("api-key") String apiKey);
 
+    @SuppressWarnings("SpellCheckingInspection")
     @GET("mostpopular/v2/mostviewed/all-sections/7.json")
     Observable<Response> getMostPopularArticles(@QueryMap Map<String, String> options);
 }

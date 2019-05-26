@@ -1,7 +1,5 @@
 package com.evani.nytimesmostpopular.network;
 
-import android.util.Log;
-
 import com.evani.nytimesmostpopular.BuildConfig;
 import com.evani.nytimesmostpopular.models.MostPopularResponse;
 import com.evani.nytimesmostpopular.utils.Constants;

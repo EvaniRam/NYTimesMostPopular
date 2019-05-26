@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.fragment.app.Fragment;
 
-public class BaseFragment extends Fragment {
+class BaseFragment extends Fragment {
 
-    public Context _context;
+    Context _context;
 }

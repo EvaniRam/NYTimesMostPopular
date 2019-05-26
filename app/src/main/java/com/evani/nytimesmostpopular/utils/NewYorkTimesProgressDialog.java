@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 
 import com.evani.nytimesmostpopular.R;
 
-public class NewYorkTimesProgressDialog extends Dialog {
+class NewYorkTimesProgressDialog extends Dialog {
 
-    Context mContext;
+    final Context mContext;
     Dialog dialog1;
 
     public Dialog showDialog() {
